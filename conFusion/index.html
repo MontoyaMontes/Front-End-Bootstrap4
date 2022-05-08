@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en">
+<head>
     <!-- Required meta tags always come first -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -29,7 +30,7 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a id="buttonLogin" type="button" role="button">
                     <span class="fa fa-sign-in"></span> Login</a>
                 </span>
             </div>  
@@ -180,7 +181,7 @@
                 </div>
                 <div class="col-12 col-sm align-self-center">
 
-                    <a data-toggle="modal" data-target="#reserveTable" role="button" class="btn btn-block nav-link btn-warning" data-placement="bottom" target="#reserveTable">Reserve Table
+                    <a id="buttonReservation" type="button" class="btn btn-warning btn-sm btn-block" role="button" class="btn btn-block nav-link btn-warning" data-placement="bottom" target="#reserveTable">Reserve Table
                     </a>
 
                 </div>
@@ -301,6 +302,14 @@
                     $("#carouselButton").children("span").addClass('fa-pause');                    
                 }
             });
+		});
+
+		$("#buttonLogin").click(function(){
+        $('#loginModal').modal('show');
+    	});
+
+		$("#buttonReservation").click(function(){
+			$('#reserveTable').modal('show');
 		});
 	</script>
 
